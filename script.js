@@ -44,3 +44,11 @@ deleteAllBtn.addEventListener("click", function() { // Add this code
 		taskList.removeChild(taskList.firstChild); // Remove all task elements from the list
 	}
 });
+
+// Add event listener to the input field
+taskInput.addEventListener("keydown", function(event) {
+	if (event.key === "Enter") { // If the Enter key is pressed
+	  event.preventDefault(); // Prevent the default form submission behavior
+	  addTaskBtn.click(); // Trigger the click event of the addTaskBtn button
+	}
+  });
